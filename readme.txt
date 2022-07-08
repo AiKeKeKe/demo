@@ -1,0 +1,22 @@
+一、springboot-websocket
+
+使用Springboot集成的websocket需要使用到以下几个类/接口：
+WebSocketHandler：WebSocket消息以及生命周期事件的处理器。
+WebSocketConfigurer：对WebSocket进行配置，包括配置拦截器、配置接口地址和处理器。
+HttpSessionHandshakeInterceptor：拦截器，可以对Websocket通信过程中的请求进行拦截处理。
+
+1.创建MyWebSocketHandler实现WebSocketHandler作为
+2.创建WebSocketMgr处理消息和websocket生命周期作为MyWebSocketHandler的属性，在该类维护websocketsession
+3.创建WebSocketHandshakeInterceptor实现HttpSessionHandshakeInterceptor
+4.创建WebSocketConfig实现WebSocketConfigurer配置拦截器、配置接口地址和处理器
+5.启动类添加@EnableWebSocket
+
+
+二、spring security digest摘要认证
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+需要使用到以下几个类/接口：
+WebSecurityConfigurerAdapter
+1.创建配置类WebSecurityConfig继承WebSecurityConfigurerAdapter
