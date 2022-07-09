@@ -7,6 +7,7 @@
   <modules>
     <module>security</module>
     <module>websocket</module>
+      <module>listener</module>
   </modules>
 
   <parent>
