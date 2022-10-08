@@ -8,6 +8,7 @@
     <module>security</module>
     <module>websocket</module>
       <module>listener</module>
+      <module>upload-download</module>
   </modules>
 
   <parent>
